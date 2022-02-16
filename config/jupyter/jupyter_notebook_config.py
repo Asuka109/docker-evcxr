@@ -202,7 +202,7 @@
 # c.NotebookApp.iopub_msg_rate_limit = 1000
 
 ## The IP address the notebook server will listen on.
-c.NotebookApp.ip = "0.0.0.0"
+c.NotebookApp.ip = '0.0.0.0'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 # c.NotebookApp.jinja_environment_options = {}
@@ -259,7 +259,7 @@ c.NotebookApp.ip = "0.0.0.0"
 # c.NotebookApp.nbserver_extensions = {}
 
 ## The directory to use for notebooks and kernels.
-c.NotebookApp.notebook_dir = "/notebooks"
+c.NotebookApp.notebook_dir = '/notebooks'
 
 ## Whether to open in a browser after starting. The specific browser used is
 #  platform dependent and determined by the python standard library `webbrowser`
