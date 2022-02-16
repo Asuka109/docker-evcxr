@@ -1,2 +1,2 @@
 #!/bin/bash
-jupyter notebook --config=/config/jupyter/jupyter_notebook_config.py
+jupyter lab --config=/config/jupyter/jupyter_notebook_config.py
