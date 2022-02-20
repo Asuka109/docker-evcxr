@@ -7,9 +7,10 @@ services:
       dockerfile: Dockerfile
     image: evcxr
     user: 1000:1000
-    working_dir: /scripts
-    command: ./start_jupyter.sh
     volumes:
       - ./notebooks:/notebooks
+      - ./config:/config
     ports:
       - 8888:8888
+    environment:
+      JUPYTER_PASSWD: jupyter

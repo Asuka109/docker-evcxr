@@ -1,6 +1,7 @@
-# docker-evcxr-jupyter
+# docker-rust-jupyter-lab
 
 A containerized version of the [Evcxr](https://github.com/google/evcxr), an evaluation context/REPL for Rust as a Jupyter kernel.
+Inspired by [cheperuiz/docker-evcxr](https://github.com/cheperuiz/docker-evcxr).
 
 ## Usage
 Just pull the docker image from the Docker hub:
