@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: evcxr
     user: 1000:1000
     volumes:
       - ./notebooks:/notebooks
