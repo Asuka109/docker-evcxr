@@ -8,7 +8,6 @@ services:
     user: 1000:1000
     volumes:
       - ./notebooks:/notebooks
-      - ./config:/config
     ports:
       - 8888:8888
     environment:
