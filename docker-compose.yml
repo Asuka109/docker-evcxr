@@ -1,14 +1,14 @@
 version: "2.3"
 
 services:
-  evcxr:
+  jupyterlab:
     build:
       context: .
       dockerfile: Dockerfile
-    user: 1000:1000
     volumes:
       - ./notebooks:/notebooks
     ports:
-      - 8888:8888
+      - 8989:8989
     environment:
       JUPYTER_PASSWD: jupyter
+      JUPYTER_PORT: 8989
