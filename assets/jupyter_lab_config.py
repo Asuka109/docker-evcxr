@@ -1,5 +1,4 @@
 # Configuration file for lab.
-from nis import cat
 from jupyter_server.auth import passwd
 import os
 
@@ -1037,10 +1036,3 @@ c.ServerApp.root_dir = '/notebooks'
 #          Should be in the form of an HTTP origin: ws[s]://hostname[:port]
 #  Default: ''
 # c.ServerApp.websocket_url = ''
-
-## Try to import user config
-try:
-    import jupyter_lab_config
-    print('Loaded user defined jupyter_lab_config.py')
-except ImportError:
-    pass

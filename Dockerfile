@@ -5,16 +5,17 @@ RUN apt update \
  && cargo install evcxr_jupyter
 
 FROM rust:slim-bullseye as runtime
-# Copy config files
-COPY config /config
 # Setup
 RUN apt update \
  && apt install -y python3 python3-pip curl \
  && rm -rf /var/lib/apt/lists/* \
  && useradd op \
- && mkdir -p /notebooks /home/op
+ && mkdir -p /notebooks /home/op /config
 # Copy Evcxr
 COPY --from=0 /usr/local/cargo/bin/evcxr_jupyter /home/op/evcxr_jupyter
+# Copy config files
+COPY assets/jupyter_lab_config.py /home/op/config/jupyter_lab_config.py
+COPY assets/startup.sh /home/op/startup.sh
 # Setup user
 RUN chown -R op /notebooks /home/op /config
 USER op
@@ -36,4 +37,4 @@ RUN . $NVM_DIR/nvm.sh \
  && tslab install
 
 # Launch Juputer
-CMD . $NVM_DIR/nvm.sh && jupyter-lab --config /config/jupyter/default_jupyter_lab_config.py
+CMD . ./startup.sh
